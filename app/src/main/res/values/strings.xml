@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BT MultiPlay</string>
+    <string name="tab_scan">Scan</string>
+    <string name="tab_connected">Speakers</string>
+    <string name="tab_settings">Settings</string>
+    <string name="action_check_updates">Check Updates</string>
+    <string name="btn_scan">Scan for Speakers</string>
+    <string name="btn_stop_scan">Stop Scan</string>
+    <string name="btn_connect">Connect</string>
+    <string name="btn_disconnect">Disconnect</string>
+    <string name="btn_forget">Forget</string>
+    <string name="label_jbl">JBL</string>
+    <string name="label_party_boost">PartyBoost</string>
+    <string name="label_non_audio">Non-audio</string>
+    <string name="no_devices_found">Tap \'Scan\' to discover nearby Bluetooth audio devices</string>
+    <string name="no_connected_devices">No speakers connected or saved.\n\nGo to \'Scan\' to find nearby speakers.</string>
+    <string name="connecting">Connecting…</string>
+    <string name="disconnecting">Disconnecting…</string>
+    <string name="auto_reconnect">Auto-reconnect</string>
+    <string name="channel_bt_service">Bluetooth Connection Service</string>
+    <string name="channel_bt_alerts">Bluetooth Alerts</string>
+    <string name="notif_managing">Managing Bluetooth connections…</string>
+    <string name="permission_rationale">BT MultiPlay needs Bluetooth and Location permissions to scan for and connect to speakers.</string>
+    <string name="dual_audio_not_supported">Your device does not support native dual Bluetooth audio. Software sync mode is active.</string>
+    <string name="dual_audio_supported">This device supports simultaneous multi-speaker audio.</string>
+</resources>
