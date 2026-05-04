@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Sync Status Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_sync_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="@color/surface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_sync_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/text_primary"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Sync Mode" />
+
+                <TextView
+                    android:id="@+id/tv_sync_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="4dp"
+                    android:text="Detecting…" />
+
+                <TextView
+                    android:id="@+id/tv_latency_warning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/warning"
+                    android:layout_marginTop="6dp"
+                    android:text="⚠ Software sync — minor latency between speakers is normal"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_test_sync"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:text="Play Sync Test Tone"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_marginEnd="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_dual_audio_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:text="Help"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        style="@style/Widget.Material3.Button.TonalButton" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Capability Badge -->
+        <TextView
+            android:id="@+id/tv_capability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="monospace" />
+
+        <!-- Empty State -->
+        <TextView
+            android:id="@+id/tv_no_devices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No speakers connected or saved.\n\nGo to 'Scan' to find nearby speakers."
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:padding="32dp"
+            android:visibility="gone" />
+
+        <!-- Connected / Saved device list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_connected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
