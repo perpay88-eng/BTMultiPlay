@@ -1,0 +1,4 @@
+-keep class com.btmultiplay.app.data.** { *; }
+-keep class com.btmultiplay.app.bluetooth.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*
