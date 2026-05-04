@@ -9,17 +9,14 @@ import com.btmultiplay.app.data.DeviceRepository
 
 class BTMultiPlayApp : Application() {
 
-    lateinit var database: AppDatabase
-        private set
-
     lateinit var deviceRepository: DeviceRepository
         private set
 
     override fun onCreate() {
         super.onCreate()
         instance = this
-        database = AppDatabase.getInstance(this)
-        deviceRepository = DeviceRepository(database.savedDeviceDao())
+        val db = AppDatabase.getInstance(this)
+        deviceRepository = DeviceRepository(db)
         createNotificationChannels()
     }
 
